@@ -117,6 +117,10 @@ export default function Index() {
           />
         </View>
       </CameraView>
+      <View style={styles.buttonContainer}>
+        <Button title="Recording On" onPress={takepic} style={styles.takePic} />
+        <Button title="Recording Off" onPress={takepic} style={styles.takePic} />
+      </View>
     </View>
   );
 }
@@ -150,12 +154,13 @@ const styles = StyleSheet.create({
     color: "white",
     justifyContent: "center",
     alignItems: "center",
-    m
+    marginBottom: 10,
+    gap: 10,
   },
   takePic: {
     position: "absolute",
     bottom: 0,
-    borderRadius: "50%",
+    borderRadius: "100%",
   },
 
   image: {
